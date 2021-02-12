@@ -28,12 +28,12 @@ namespace Operation_Broken_Arrow.Movement
 
         private void ProcessRotation()
         {
-            float roll = transform.localRotation.x + _rollFactor * _xAxis;
-            float yaw = 90f + transform.localRotation.y + _yawFactor * _xAxis;
-            float pitch = transform.localRotation.z - _pitchFactor * _yAxis;
+            float roll = transform.localPosition.z - _rollFactor * _xAxis;
+            float yaw = transform.localPosition.y + _yawFactor * _xAxis;
+            float pitch = transform.localPosition.x - _pitchFactor * _yAxis;
             
 
-            transform.localRotation = Quaternion.Euler(roll, yaw, pitch);
+            transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
         }
 
         private void ProcessTranslation()
