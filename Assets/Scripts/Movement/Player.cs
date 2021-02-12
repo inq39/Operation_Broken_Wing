@@ -10,6 +10,15 @@ namespace Operation_Broken_Arrow.Movement
         [SerializeField]
         [Range(5f, 20f)]
         private float _agility;
+        private float _xAxis;
+        private float _yAxis;
+        [SerializeField]
+        private float _rollFactor;
+        [SerializeField]
+        private float _yawFactor;
+        [SerializeField]
+        private float _pitchFactor;
+        
 
         private void Update()
         {
@@ -19,18 +28,23 @@ namespace Operation_Broken_Arrow.Movement
 
         private void ProcessRotation()
         {
-            //transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+            float roll = transform.localRotation.x + _rollFactor * _xAxis;
+            float yaw = 90f + transform.localRotation.y + _yawFactor * _xAxis;
+            float pitch = transform.localRotation.z - _pitchFactor * _yAxis;
+            
+
+            transform.localRotation = Quaternion.Euler(roll, yaw, pitch);
         }
 
         private void ProcessTranslation()
         {
-            float xAxis = Input.GetAxis("Horizontal");
-            float yAxis = Input.GetAxis("Vertical");
+            _xAxis = Input.GetAxis("Horizontal");
+            _yAxis = Input.GetAxis("Vertical");
 
-            float newXPos = xAxis * Time.deltaTime * _agility + transform.localPosition.x;
-            float newYPos = yAxis * Time.deltaTime * _agility + transform.localPosition.y;
+            float newXPos = _xAxis * Time.deltaTime * _agility + transform.localPosition.x;
+            float newYPos = _yAxis * Time.deltaTime * _agility + transform.localPosition.y;
 
-            transform.localPosition = new Vector3(Mathf.Clamp(newXPos, -5f, 5f), Mathf.Clamp(newYPos, 0f, 5f), transform.localPosition.z);
+            transform.localPosition = new Vector3(Mathf.Clamp(newXPos, -5f, 5f), Mathf.Clamp(newYPos, 0f, 7f), transform.localPosition.z);
         }
     }
 }
