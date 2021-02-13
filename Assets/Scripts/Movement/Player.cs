@@ -8,6 +8,8 @@ namespace Operation_Broken_Arrow.Movement
     public class Player : MonoBehaviour
     {
         [SerializeField]
+        private GameObject[] _weapons;
+        [SerializeField]
         [Range(5f, 20f)]
         private float _agility;
         private float _xAxis;
@@ -24,6 +26,28 @@ namespace Operation_Broken_Arrow.Movement
         {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
+        }
+
+        private void ProcessFiring()
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                SetWeaponSystem(true);
+            }
+            else
+            {
+                SetWeaponSystem(false);
+            }
+        }
+
+        private void SetWeaponSystem(bool status)
+        {
+            foreach (GameObject weapon in _weapons)
+            {
+                var emissionModule = weapon.GetComponent<ParticleSystem>().emission;
+                emissionModule.enabled = status;
+            }
         }
 
         private void ProcessRotation()
