@@ -11,5 +11,7 @@ namespace Operation_Broken_Arrow.Combat
             Debug.Log("Hit: " + this.name + " by " + other.gameObject.name);
             Destroy(this.gameObject);
         }
+
+     
     }
 }
