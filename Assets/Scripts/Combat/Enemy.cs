@@ -7,22 +7,43 @@ namespace Operation_Broken_Arrow.Combat
 {
     public class Enemy : MonoBehaviour
     {
-        [SerializeField]
         private Transform _explosionContainer;
         [SerializeField]
         private GameObject _explosionPrefab;
+        [SerializeField]
+        private AudioClip _hitSound;
 
+        [SerializeField]
+        private int _hitsToDestroy;
+        private bool _isDestroying;
+
+
+        private void Start()
+        {
+            _isDestroying = false;
+
+            _explosionContainer = GameObject.FindWithTag("Container").GetComponent<Transform>();
+            if (_explosionContainer == null)
+                Debug.LogError("Container is NULL.");
+        }
         private void OnParticleCollision(GameObject other)
         {
-            GenerateExplosion();
-            Invoke("DestroyGameObject", 1f);
+            _hitsToDestroy--;
+            AudioSource.PlayClipAtPoint(_hitSound, transform.position);
+            if (_hitsToDestroy <= 0)
+            DestroyGameObject();
         }
 
         private void DestroyGameObject()
-        {
-            int reward = GetComponent<EnemyReward>().Points;
-            GameManager.Instance.UpdatePlayerScore(reward);
-            Destroy(this.gameObject);
+        {        
+            if (!_isDestroying)
+            {
+                _isDestroying = true;
+                GenerateExplosion();
+                int reward = GetComponent<EnemyReward>().Points;
+                GameManager.Instance.UpdatePlayerScore(reward);
+                Destroy(this.gameObject, 1f);
+            }                     
         }
 
         private void GenerateExplosion()

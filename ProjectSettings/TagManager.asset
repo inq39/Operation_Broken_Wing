@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - UI
+  - Container
   layers:
   - Default
   - TransparentFX
