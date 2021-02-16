@@ -19,10 +19,19 @@ namespace Operation_Broken_Arrow.Manager
         }
 
         private void Awake()
+
         {
             _instance = this as T;
             DontDestroyOnLoad(this.gameObject);
-        }
+            /*int numberManagers = FindObjectsOfType<T>().Length;
+            if (numberManagers <= 1)
+            {
+                //Destroy(this.gameObject);
+            }
+            else
+            {
 
+            }*/
+        }
     }
 }
