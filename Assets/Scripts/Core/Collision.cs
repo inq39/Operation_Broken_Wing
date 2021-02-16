@@ -1,14 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Operation_Broken_Arrow.Manager;
 using Operation_Broken_Arrow.Movement;
 
 namespace Operation_Broken_Arrow.Core
 {
     public class Collision : MonoBehaviour
     {
-        private Scene _thisScene;
         private Player _player;
         [SerializeField]
         private ParticleSystem _particle;
@@ -17,7 +15,6 @@ namespace Operation_Broken_Arrow.Core
 
         private void Start()
         {
-            _thisScene = SceneManager.GetActiveScene();
             _player = GetComponent<Player>();
         }
 
@@ -38,7 +35,7 @@ namespace Operation_Broken_Arrow.Core
             _particle.Stop();
             _mainExplosion.SetActive(true);
             yield return new WaitForSeconds(2f);
-            SceneManager.LoadSceneAsync(_thisScene.buildIndex);
+            GameManager.Instance.RestartLevel();
         }
     }
 }
