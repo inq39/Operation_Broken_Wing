@@ -12,16 +12,22 @@ namespace Operation_Broken_Arrow.Manager
         private int _score;
         public int Score { get => _score; }
 
-        private Scene _thisScene;
+        private int _thisScene;
 
 
         private void Start()
         {
-            _thisScene = SceneManager.GetActiveScene();
+            _thisScene = SceneManager.GetActiveScene().buildIndex;
 
-            _score = 0;
+            ResetScore();
             UpdatePlayerScore(_score);
             UIManager.Instance.UpdateHighScoreText(_highScore);
+        }
+
+        private void ResetScore()
+        {
+            _score = 0;
+            UIManager.Instance.UpdateScoreText(_score);
         }
 
         public void UpdatePlayerScore(int scoreUpdate)
@@ -33,7 +39,8 @@ namespace Operation_Broken_Arrow.Manager
 
         public void RestartLevel()
         {
-            SceneManager.LoadSceneAsync(_thisScene.buildIndex);
+            ResetScore();
+            SceneManager.LoadSceneAsync(_thisScene);
         }
 
         private void CheckForNewHighscore()
