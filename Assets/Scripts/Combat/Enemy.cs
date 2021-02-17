@@ -20,8 +20,6 @@ namespace Operation_Broken_Arrow.Combat
 
         private void Start()
         {
-            _isDestroying = false;
-
             _explosionContainer = GameObject.FindWithTag("Container").GetComponent<Transform>();
             if (_explosionContainer == null)
                 Debug.LogError("Container is NULL.");
@@ -42,7 +40,7 @@ namespace Operation_Broken_Arrow.Combat
                 GenerateExplosion();
                 int reward = GetComponent<EnemyReward>().Points;
                 GameManager.Instance.UpdatePlayerScore(reward);
-                Destroy(this.gameObject, 1f);
+                Destroy(this.gameObject, 0.6f);
             }                     
         }
 
