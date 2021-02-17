@@ -245,6 +245,14 @@ PrefabInstance:
       propertyPath: TrailModule.sizeAffectsWidth
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6386920587389297847, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386920587389297847, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.36
+      objectReference: {fileID: 0}
     - target: {fileID: 7767309231329796176, guid: ec6c320a41b48f448b4f67e0c941f00d, type: 3}
       propertyPath: _weapons.Array.size
       value: 2
@@ -329,15 +337,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4019497043458186, guid: a787b4a495bb64d96830e95e2c353bdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.917027
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019497043458186, guid: a787b4a495bb64d96830e95e2c353bdd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.450005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019497043458186, guid: a787b4a495bb64d96830e95e2c353bdd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 121.079285
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019497043458186, guid: a787b4a495bb64d96830e95e2c353bdd, type: 3}
       propertyPath: m_LocalRotation.w

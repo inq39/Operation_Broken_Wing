@@ -34,7 +34,7 @@ namespace Operation_Broken_Arrow.Core
             yield return new WaitForSeconds(3f);
             _particle.Stop();
             _mainExplosion.SetActive(true);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             GameManager.Instance.RestartLevel();
         }
     }
