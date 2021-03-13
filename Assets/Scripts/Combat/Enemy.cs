@@ -1,9 +1,8 @@
-using System.Collections;
+using Core;
+using Manager;
 using UnityEngine;
-using Operation_Broken_Arrow.Core;
-using Operation_Broken_Arrow.Manager;
 
-namespace Operation_Broken_Arrow.Combat
+namespace Combat
 {
     public class Enemy : MonoBehaviour
     {
@@ -29,7 +28,7 @@ namespace Operation_Broken_Arrow.Combat
             _hitsToDestroy--;
             AudioSource.PlayClipAtPoint(_hitSound, transform.position);
             if (_hitsToDestroy <= 0)
-            DestroyGameObject();
+              DestroyGameObject();
         }
 
         private void DestroyGameObject()

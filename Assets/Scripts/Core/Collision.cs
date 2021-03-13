@@ -1,9 +1,9 @@
 using System.Collections;
+using Manager;
+using Movement;
 using UnityEngine;
-using Operation_Broken_Arrow.Manager;
-using Operation_Broken_Arrow.Movement;
 
-namespace Operation_Broken_Arrow.Core
+namespace Core
 {
     public class Collision : MonoBehaviour
     {

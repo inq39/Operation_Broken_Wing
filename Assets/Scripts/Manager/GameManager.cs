@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-namespace Operation_Broken_Arrow.Manager
+namespace Manager
 {
     public class GameManager : MonoSingleton<GameManager>
     {
@@ -12,12 +7,9 @@ namespace Operation_Broken_Arrow.Manager
         private int _score;
         public int Score { get => _score; }
 
-        private int _thisScene;
-
 
         private void Start()
         {
-            _thisScene = SceneManager.GetActiveScene().buildIndex;
 
             ResetScore();
             UpdatePlayerScore(_score);
@@ -40,7 +32,7 @@ namespace Operation_Broken_Arrow.Manager
         public void RestartLevel()
         {
             ResetScore();
-            SceneManager.LoadSceneAsync(_thisScene);
+            LevelManager.Instance.ReloadLevel();
         }
 
         private void CheckForNewHighscore()

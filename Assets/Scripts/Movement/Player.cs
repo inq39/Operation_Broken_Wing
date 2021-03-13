@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Operation_Broken_Arrow.Movement
+namespace Movement
 {
     public class Player : MonoBehaviour
     {

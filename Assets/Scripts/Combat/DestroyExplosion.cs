@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Operation_Broken_Arrow.Combat
+namespace Combat
 {
     public class DestroyExplosion : MonoBehaviour
     {

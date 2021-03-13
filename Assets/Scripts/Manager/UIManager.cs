@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-namespace Operation_Broken_Arrow.Manager
+namespace Manager
 {
     public class UIManager : MonoSingleton<UIManager>
     {

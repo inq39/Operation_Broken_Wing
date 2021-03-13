@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Operation_Broken_Arrow.Manager
+namespace Manager
 {
     public class AudioManager : MonoSingleton<AudioManager>
     {
