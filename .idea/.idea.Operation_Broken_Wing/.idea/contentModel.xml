@@ -9,6 +9,17 @@
           <e p="8K Skybox Pack Free" t="Include">
             <e p="ReadMe.txt" t="Include" />
           </e>
+          <e p="SCI-FI UI Pack_V2 Pro" t="Include">
+            <e p="Resources_V2 Pro" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="CircleSlider.cs" t="Include" />
+                <e p="JustRotate.cs" t="Include" />
+                <e p="PressedBtn.cs" t="Include" />
+                <e p="SliderRunTo1.cs" t="Include" />
+                <e p="SliderValuePass.cs" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="GameDevHQ" t="Include">
           <e p="FileBase" t="Include">
