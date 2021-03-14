@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenu:
     m_Handle: 0
-  _nextLevel: Scene_02
+  _nextLevel: MainMenu
 --- !u!4 &1502988209
 Transform:
   m_ObjectHideFlags: 0
