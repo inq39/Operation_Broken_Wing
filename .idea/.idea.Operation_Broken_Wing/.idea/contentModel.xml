@@ -28,6 +28,28 @@
             </e>
           </e>
         </e>
+        <e p="Operation_Broken_Wing" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Combat" t="Include">
+              <e p="DestroyExplosion.cs" t="Include" />
+              <e p="Enemy.cs" t="Include" />
+            </e>
+            <e p="Core" t="Include">
+              <e p="Collision.cs" t="Include" />
+              <e p="EnemyReward.cs" t="Include" />
+            </e>
+            <e p="Manager" t="Include">
+              <e p="AudioManager.cs" t="Include" />
+              <e p="GameManager.cs" t="Include" />
+              <e p="LevelManager.cs" t="Include" />
+              <e p="MonoSingleton.cs" t="Include" />
+              <e p="UIManager.cs" t="Include" />
+            </e>
+            <e p="Movement" t="Include">
+              <e p="Player.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Samples" t="Include">
           <e p="Terrain Tools" t="Include">
             <e p="0.1.0-preview" t="Include">
@@ -36,27 +58,6 @@
               </e>
             </e>
           </e>
-        </e>
-        <e p="Scripts" t="Include">
-          <e p="Combat" t="Include">
-            <e p="DestroyExplosion.cs" t="Include" />
-            <e p="Enemy.cs" t="Include" />
-          </e>
-          <e p="Core" t="Include">
-            <e p="Collision.cs" t="Include" />
-            <e p="EnemyReward.cs" t="Include" />
-          </e>
-          <e p="Manager" t="Include">
-            <e p="AudioManager.cs" t="Include" />
-            <e p="GameManager.cs" t="Include" />
-            <e p="LevelManager.cs" t="Include" />
-            <e p="MonoSingleton.cs" t="Include" />
-            <e p="UIManager.cs" t="Include" />
-          </e>
-          <e p="Movement" t="Include">
-            <e p="Player.cs" t="Include" />
-          </e>
-          <e p="SimpleCameraController.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

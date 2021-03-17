@@ -1,53 +1,54 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PressedBtn : MonoBehaviour , IPointerDownHandler ,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler
+namespace Operation_Broken_Wing.Asset_Packs.Resources_V2_Pro.Scripts
 {
-
-    Button btn;
-
-    Transform myIcon;
-
-    private void Start()
+    public class PressedBtn : MonoBehaviour , IPointerDownHandler ,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler
     {
-        btn = GetComponent<Button>();
 
-        if(transform.childCount>0)
-              myIcon = transform.GetChild(0);
-    }
+        Button btn;
+
+        Transform myIcon;
+
+        private void Start()
+        {
+            btn = GetComponent<Button>();
+
+            if(transform.childCount>0)
+                myIcon = transform.GetChild(0);
+        }
  
 
-    public  void OnClick () {
+        public  void OnClick () {
 
-        if(myIcon!=null)
-        myIcon.localScale = Vector3.one ;
-	}
+            if(myIcon!=null)
+                myIcon.localScale = Vector3.one ;
+        }
 
-    public void OnPressed () {
-        if (myIcon != null)
-            myIcon.localScale = Vector3.one * 1.2f;
-    }
+        public void OnPressed () {
+            if (myIcon != null)
+                myIcon.localScale = Vector3.one * 1.2f;
+        }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        OnPressed();
-    }
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            OnPressed();
+        }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-    //    OnClick();
-    }
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            //    OnClick();
+        }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        OnPressed();
-    }
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            OnPressed();
+        }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        OnClick();
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            OnClick();
+        }
     }
 }

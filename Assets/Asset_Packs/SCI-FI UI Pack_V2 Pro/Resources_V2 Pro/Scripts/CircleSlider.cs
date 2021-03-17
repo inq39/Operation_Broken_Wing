@@ -1,42 +1,44 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-public class CircleSlider : MonoBehaviour
-{
- 
-     public bool b=true;
-	 public Image image;
-	 public float speed=0.5f;
 
-  float time =0f;
+namespace Operation_Broken_Wing.Asset_Packs.Resources_V2_Pro.Scripts
+{
+	public class CircleSlider : MonoBehaviour
+	{
+ 
+		public bool b=true;
+		public Image image;
+		public float speed=0.5f;
+
+		float time =0f;
   
-  public Text progress;
+		public Text progress;
   
-  void Start()
-  {
+		void Start()
+		{
 	  
-	image = GetComponent<Image>();
-  }
-  
-    void Update()
-    {
-		if(b)
-		{
-			time+=Time.deltaTime*speed;
-			image.fillAmount= time;
-			if(progress)
-			{
-				progress.text = (int)(image.fillAmount*100)+"%";
-			}
-			
-        if(time>1)
-		{
-						
-			time=0;
+			image = GetComponent<Image>();
 		}
-    }
+  
+		void Update()
+		{
+			if(b)
+			{
+				time+=Time.deltaTime*speed;
+				image.fillAmount= time;
+				if(progress)
+				{
+					progress.text = (int)(image.fillAmount*100)+"%";
+				}
+			
+				if(time>1)
+				{
+						
+					time=0;
+				}
+			}
+		}
+	
+	
 	}
-	
-	
 }

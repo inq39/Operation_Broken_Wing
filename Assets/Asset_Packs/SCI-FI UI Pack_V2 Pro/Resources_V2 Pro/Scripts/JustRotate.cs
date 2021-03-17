@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class JustRotate : MonoBehaviour {
+namespace Operation_Broken_Wing.Asset_Packs.Resources_V2_Pro.Scripts
+{
+	public class JustRotate : MonoBehaviour {
 
-public bool canRotate=true;
-public float speed=10;
+		public bool canRotate=true;
+		public float speed=10;
  
-	void Update ()
-	{
-		if(canRotate)
-		  transform.Rotate(speed*Vector3.forward*Time.deltaTime);
+		void Update ()
+		{
+			if(canRotate)
+				transform.Rotate(speed*Vector3.forward*Time.deltaTime);
+		}
 	}
 }
