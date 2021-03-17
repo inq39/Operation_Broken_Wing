@@ -42,11 +42,15 @@
               <e p="AudioManager.cs" t="Include" />
               <e p="GameManager.cs" t="Include" />
               <e p="LevelManager.cs" t="Include" />
+              <e p="MenuManager.cs" t="Include" />
               <e p="MonoSingleton.cs" t="Include" />
               <e p="UIManager.cs" t="Include" />
             </e>
             <e p="Movement" t="Include">
               <e p="Player.cs" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="Menu.cs" t="Include" />
             </e>
           </e>
         </e>
