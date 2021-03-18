@@ -599,7 +599,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8224687069906536106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7fbf51a0c54b0fbe6464ecf48ccd8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 82e853725e5d41d38e6b8dc1852afc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8225151747455340684
@@ -803,8 +803,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4581932604717697337}
-        m_TargetAssemblyTypeName: Operation_Broken_Wing.UI.Menu, Assembly-CSharp
-        m_MethodName: OnQuitButton
+        m_TargetAssemblyTypeName: Operation_Broken_Wing.UI.MainMenu, Assembly-CSharp
+        m_MethodName: OnBackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

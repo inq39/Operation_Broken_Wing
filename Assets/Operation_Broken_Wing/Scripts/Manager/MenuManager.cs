@@ -16,10 +16,10 @@ namespace Operation_Broken_Wing.Manager
         private Stack<Menu> _menuStack = new Stack<Menu>();
         
 
-        private void Start()
+        protected override void Awake()
         {
+            base.Awake();
             InitializeMenus();
-
         }
         
         private void InitializeMenus()

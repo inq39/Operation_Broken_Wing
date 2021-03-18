@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eabd5abc-6c87-490b-b8f7-f105925c25a9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Operation_Broken_Wing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Operation_Broken_Wing/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Operation_Broken_Wing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Operation_Broken_Wing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Prefabs/UI/IntroText.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Prefabs/UI/IntroText.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Prefabs/UI/Main_Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Prefabs/UI/Main_Menu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Prefabs/UI/Settings_Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Prefabs/UI/Settings_Menu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Manager/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Manager/MenuManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Manager/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Manager/MonoSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menus/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menus/Menu.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +47,12 @@
       <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Movement/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Core/Collision.cs" />
       <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Combat/DestroyExplosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menu.cs" />
       <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Manager/MonoSingleton.cs" />
       <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/Manager/MenuManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menus/MainMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menus/SettingsMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Operation_Broken_Wing/Scripts/UI/Menus/Menu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1peTVfMuH0qDRvzCKScDUQpgttQ" />
@@ -66,7 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="RiderCodeAnnotations" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -100,7 +103,7 @@
       <workItem from="1615622301123" duration="5107000" />
       <workItem from="1615999187121" duration="1645000" />
       <workItem from="1616000936052" duration="6906000" />
-      <workItem from="1616058737597" duration="3943000" />
+      <workItem from="1616058737597" duration="10237000" />
     </task>
     <servers />
   </component>
