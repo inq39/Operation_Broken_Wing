@@ -5,21 +5,23 @@ using Operation_Broken_Wing.UI;
 
 namespace Operation_Broken_Wing.Manager
 {
-    public class MenuManager : MonoBehaviour
+    public class MenuManager : MonoSingleton<MenuManager>
     {
         [SerializeField]
         private Menu mainMenu;
         [SerializeField]
         private Menu settingsMenu;
         [SerializeField]
-        private Transform _menuParent;
+        public Transform _menuParent;
         private Stack<Menu> _menuStack = new Stack<Menu>();
+        
 
-        private void Awake()
+        private void Start()
         {
             InitializeMenus();
-        }
 
+        }
+        
         private void InitializeMenus()
         {
             if (_menuParent == null)

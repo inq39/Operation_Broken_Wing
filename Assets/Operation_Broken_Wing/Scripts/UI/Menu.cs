@@ -1,4 +1,5 @@
-﻿using Operation_Broken_Wing.Manager;
+﻿using System;
+using Operation_Broken_Wing.Manager;
 using UnityEngine;
 
 namespace Operation_Broken_Wing.UI
@@ -8,7 +9,7 @@ namespace Operation_Broken_Wing.UI
     {
         public void OnBackButton()
         {
-            
+            MenuManager.Instance.CloseMenu();
         }
 
         public void OnPlayButton()
@@ -18,7 +19,11 @@ namespace Operation_Broken_Wing.UI
 
         public void OnOptionsButton()
         {
-            
+            Menu settingsMenu = transform.parent.Find("Settings_Menu(Clone)").GetComponent<Menu>();
+            if (settingsMenu != null)
+            {
+                MenuManager.Instance.OpenMenu(settingsMenu);
+            }
         }
 
         public void OnQuitButton()

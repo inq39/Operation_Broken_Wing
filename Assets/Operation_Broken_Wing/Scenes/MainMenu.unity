@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 180060339}
   - component: {fileID: 180060338}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: Level_Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,8 +606,8 @@ GameObject:
   - component: {fileID: 1134174117}
   - component: {fileID: 1134174118}
   m_Layer: 0
-  m_Name: MenuManager
-  m_TagString: Untagged
+  m_Name: Menu_Manager
+  m_TagString: MenuManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
