@@ -1,3 +1,4 @@
+using Operation_Broken_Wing.Manager;
 using UnityEngine;
 
 namespace Operation_Broken_Wing.Movement
@@ -24,6 +25,14 @@ namespace Operation_Broken_Wing.Movement
             ProcessTranslation();
             ProcessRotation();
             ProcessFiring();
+            CheckForPauseMenu();
+        }
+        private void CheckForPauseMenu()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                LevelManager.Instance.PauseGame();
+            }
         }
 
         private void ProcessFiring()
@@ -53,7 +62,6 @@ namespace Operation_Broken_Wing.Movement
             float yaw = transform.localPosition.y + _yawFactor * _xAxis;
             float pitch = transform.localPosition.x - _pitchFactor * _yAxis;
             
-
             transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
         }
 

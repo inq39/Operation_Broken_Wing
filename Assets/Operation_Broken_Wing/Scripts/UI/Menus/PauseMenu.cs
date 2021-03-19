@@ -1,9 +1,8 @@
 ﻿using Operation_Broken_Wing.Manager;
-using UnityEngine;
 
 namespace Operation_Broken_Wing.UI
 {
-    public class MainMenu : Menu<MainMenu>
+    public class PauseMenu : Menu<PauseMenu>
     {
         public override void OnBackButton()
         {
@@ -11,16 +10,22 @@ namespace Operation_Broken_Wing.UI
             LevelManager.Instance.QuitGame(); //Quit-Button instead Back-Button
         }
 
-        public void OnPlayButton()
+        public void OnRestartButton()
         {
             AudioManager.Instance.PressButton();
-            LevelManager.Instance.LoadNextLevel();
+            LevelManager.Instance.ReloadLevel();
         }
 
-        public void OnOptionsButton()
+        public void OnMainMenuButton()
         {
             AudioManager.Instance.PressButton();
-            MenuManager.Instance.OpenMenu(SettingsMenu.Instance);
+            LevelManager.Instance.ReturnToMainMenu();
+        }
+
+        public void OnResumeButton()
+        {
+            AudioManager.Instance.PressButton();
+            LevelManager.Instance.ResumeGame();
         }
     }
 }

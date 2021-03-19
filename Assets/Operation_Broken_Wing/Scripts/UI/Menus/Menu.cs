@@ -36,6 +36,7 @@ namespace Operation_Broken_Wing.UI
     {
         public virtual void OnBackButton()
         {
+            AudioManager.Instance.PressButton();
             MenuManager.Instance.CloseMenu();
         }
     }

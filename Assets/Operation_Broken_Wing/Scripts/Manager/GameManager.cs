@@ -1,3 +1,6 @@
+using Operation_Broken_Wing.UI;
+using UnityEngine;
+
 namespace Operation_Broken_Wing.Manager
 {
     public class GameManager : MonoSingleton<GameManager>
@@ -10,7 +13,6 @@ namespace Operation_Broken_Wing.Manager
 
         private void Start()
         {
-
             ResetScore();
             UpdatePlayerScore(_score);
             UIManager.Instance.UpdateHighScoreText(_highScore);
@@ -34,7 +36,7 @@ namespace Operation_Broken_Wing.Manager
             ResetScore();
             LevelManager.Instance.ReloadLevel();
         }
-
+        
         private void CheckForNewHighscore()
         {
             if (_score > _highScore)
