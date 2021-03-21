@@ -12,8 +12,8 @@ namespace Operation_Broken_Wing.Manager
         private Scene _activeLevel;
         [SerializeField]
         private int _mainMenuIndex;
-        [SerializeField]
-        private GameObject _pauseMenu;
+        private bool _isGamePaused;
+        public bool IsGamePaused { get { return _isGamePaused; } }
 
         public void Start()
         {
@@ -43,17 +43,20 @@ namespace Operation_Broken_Wing.Manager
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(_mainMenuIndex);
+            MenuManager.Instance.OpenMenu(MainMenu.Instance);
         }
-        public void PauseGame()
+        public void PauseLevel()
         {
+            _isGamePaused = true;
             Time.timeScale = 0f;
-            _pauseMenu.SetActive(true);
+            AudioManager.Instance.PressButton();
+            MenuManager.Instance.OpenMenu(PauseMenu.Instance);
         }
 
-        public void ResumeGame()
+        public void ResumeLevel()
         {
-            _pauseMenu.SetActive(false);
             Time.timeScale = 1f;
+            _isGamePaused = false;
         }
         
     }

@@ -8,32 +8,40 @@ namespace Operation_Broken_Wing.Manager
     public class MenuManager : MonoSingleton<MenuManager>
     {
         [SerializeField]
-        private Menu mainMenu;
+        private Menu _mainMenu;
         [SerializeField]
-        private Menu settingsMenu;
+        private Menu _settingsMenu;
         [SerializeField]
-        public Transform _menuParent;
+        private Menu _pauseMenu;
+
+        private Transform _menuParent;
         private Stack<Menu> _menuStack = new Stack<Menu>();
+        private static bool _menusInitialized;
         
 
         protected override void Awake()
         {
             base.Awake();
-            InitializeMenus();
+            DontDestroyOnLoad(gameObject);
+            if (_menusInitialized == false)
+                InitializeMenus();
         }
         
         private void InitializeMenus()
         {
             if (_menuParent == null)
-                Debug.Log("Menu Folder not set.");
-
-            Menu[] menuPrefabs = new[]{mainMenu, settingsMenu};
+            {
+                _menuParent = new GameObject("---UI---").transform;
+            }
+            DontDestroyOnLoad(_menuParent);
+            
+            Menu[] menuPrefabs = new[]{_mainMenu, _settingsMenu, _pauseMenu};
             foreach (Menu prefab in menuPrefabs)
             {
                 if (prefab != null)
                 {
                     Menu newMenu = Instantiate(prefab, _menuParent);
-                    if (prefab != mainMenu)
+                    if (prefab != _mainMenu)
                     {
                         newMenu.gameObject.SetActive(false);
                     }
@@ -43,6 +51,7 @@ namespace Operation_Broken_Wing.Manager
                     }
                 }
             }
+            _menusInitialized = true;
         }
 
         public void OpenMenu(Menu menuInstance)

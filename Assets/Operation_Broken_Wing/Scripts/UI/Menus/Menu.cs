@@ -36,8 +36,22 @@ namespace Operation_Broken_Wing.UI
     {
         public virtual void OnBackButton()
         {
+            OnButtonPressRoutine();
+        }
+
+        public void OnMouseOverSound()
+        {
+            // used for Event Trigger - Pointer Enter on all Buttons
+            AudioManager.Instance.OverButton();
+        }
+        
+        protected void OnButtonPressRoutine() 
+        {
             AudioManager.Instance.PressButton();
             MenuManager.Instance.CloseMenu();
         }
+        
     }
+    
+    
 }

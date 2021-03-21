@@ -1,4 +1,5 @@
 using Operation_Broken_Wing.Manager;
+using Operation_Broken_Wing.UI;
 using UnityEngine;
 
 namespace Operation_Broken_Wing.Movement
@@ -29,9 +30,9 @@ namespace Operation_Broken_Wing.Movement
         }
         private void CheckForPauseMenu()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) && !LevelManager.Instance.IsGamePaused)
             {
-                LevelManager.Instance.PauseGame();
+               LevelManager.Instance.PauseLevel();
             }
         }
 

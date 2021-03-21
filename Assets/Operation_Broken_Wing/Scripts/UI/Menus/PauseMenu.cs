@@ -6,26 +6,26 @@ namespace Operation_Broken_Wing.UI
     {
         public override void OnBackButton()
         {
-            AudioManager.Instance.PressButton();
+            base.OnButtonPressRoutine();
             LevelManager.Instance.QuitGame(); //Quit-Button instead Back-Button
         }
 
         public void OnRestartButton()
         {
-            AudioManager.Instance.PressButton();
+            base.OnButtonPressRoutine();
             LevelManager.Instance.ReloadLevel();
         }
 
         public void OnMainMenuButton()
         {
-            AudioManager.Instance.PressButton();
+            base.OnButtonPressRoutine();
             LevelManager.Instance.ReturnToMainMenu();
         }
 
         public void OnResumeButton()
         {
-            AudioManager.Instance.PressButton();
-            LevelManager.Instance.ResumeGame();
+            base.OnButtonPressRoutine();
+            LevelManager.Instance.ResumeLevel();
         }
     }
 }

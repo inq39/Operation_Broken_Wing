@@ -7,13 +7,13 @@ namespace Operation_Broken_Wing.UI
     {
         public override void OnBackButton()
         {
-            AudioManager.Instance.PressButton();
+            base.OnButtonPressRoutine();
             LevelManager.Instance.QuitGame(); //Quit-Button instead Back-Button
         }
 
         public void OnPlayButton()
         {
-            AudioManager.Instance.PressButton();
+            base.OnButtonPressRoutine();
             LevelManager.Instance.LoadNextLevel();
         }
 
