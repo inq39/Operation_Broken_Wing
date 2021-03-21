@@ -8,11 +8,7 @@ namespace Operation_Broken_Wing.Manager
     public class MenuManager : MonoSingleton<MenuManager>
     {
         [SerializeField]
-        private Menu _mainMenu;
-        [SerializeField]
-        private Menu _settingsMenu;
-        [SerializeField]
-        private Menu _pauseMenu;
+        private Menu[] _menuPrefabs;
 
         private Transform _menuParent;
         private Stack<Menu> _menuStack = new Stack<Menu>();
@@ -35,13 +31,12 @@ namespace Operation_Broken_Wing.Manager
             }
             DontDestroyOnLoad(_menuParent);
             
-            Menu[] menuPrefabs = new[]{_mainMenu, _settingsMenu, _pauseMenu};
-            foreach (Menu prefab in menuPrefabs)
+            foreach (Menu prefab in _menuPrefabs)
             {
                 if (prefab != null)
                 {
                     Menu newMenu = Instantiate(prefab, _menuParent);
-                    if (prefab != _mainMenu)
+                    if (!prefab.CompareTag("MainMenu"))
                     {
                         newMenu.gameObject.SetActive(false);
                     }

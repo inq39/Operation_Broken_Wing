@@ -8,6 +8,7 @@ TagManager:
   - UI
   - Container
   - MenuManager
+  - MainMenu
   layers:
   - Default
   - TransparentFX

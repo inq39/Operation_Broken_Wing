@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909efe57c59b47608fac790988a12186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainMenu: {fileID: 4581932604717697337, guid: dc8442f4fb0326f4081189f9f47248aa, type: 3}
-  _settingsMenu: {fileID: 1176856337330900777, guid: 885b29d8c9a489341bdcf7c4c038a91b, type: 3}
-  _pauseMenu: {fileID: 693613227, guid: b53768c442fe4714ba4bc3b48ddc7b65, type: 3}
+  _menuPrefabs:
+  - {fileID: 4581932604717697337, guid: dc8442f4fb0326f4081189f9f47248aa, type: 3}
+  - {fileID: 1176856337330900777, guid: 885b29d8c9a489341bdcf7c4c038a91b, type: 3}
+  - {fileID: 693613227, guid: b53768c442fe4714ba4bc3b48ddc7b65, type: 3}
